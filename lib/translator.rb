@@ -18,11 +18,11 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   dictionary = load_library(file_path)
-  
-  
+  dictionary['get_emoticon'].fetch(emoticon, "Sorry, that emoticon was not found")
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, emoticon)
+  dictionary = load_library(file_path)
+  dictionary['get_meaning'].fetch(emoticon, "Sorry, that emoticon was not found")
 end
 
