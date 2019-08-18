@@ -10,14 +10,16 @@ def load_library(file_path)
     english_emoticon = faces[0]
     japanese_emoticon = faces[1]
     dictionary['get_meaning'][japanese_emoticon] = meaning
-    dictionary['get_emoticon'][english_emoticon] = faces[1]
+    dictionary['get_emoticon'][english_emoticon] = japanese_emoticon
   end
     
   return dictionary
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path, emoticon)
+  dictionary = load_library(file_path)
+  
+  
 end
 
 def get_english_meaning
